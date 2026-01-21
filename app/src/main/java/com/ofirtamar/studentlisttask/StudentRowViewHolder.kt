@@ -26,7 +26,6 @@ class StudentRowViewHolder(
             isChecked = student.checkStatus
             tag = position
         }
-        Log.v("TAG", "Loading image from URI: ${student.avatarUrlString}")
         Picasso
             .get()
             .load(student.avatarUrlString)

@@ -12,19 +12,14 @@ class StudentListMainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.title = "Students List"
-
-        // Inflate the content layout using View Binding
         binding = ActivityStudentsRecyclerViewBinding.inflate(layoutInflater)
 
-        // Add the content view to the base activity's content frame
         super.contentFrame.addView(binding.root)
 
-        // Now you can safely access the RecyclerView via the binding object
         binding.studentRecyclerView.layoutManager = LinearLayoutManager(this)
 
         val students = mutableListOf<Student>()
 
-        // Create a URI string that points to a local drawable resource
         val imageUri = "android.resource://com.ofirtamar.studentlisttask/" + R.mipmap.ic_launcher
 
         students.add(Student("1", "John Doe", "555-1234", "123 Main St", false, imageUri))
