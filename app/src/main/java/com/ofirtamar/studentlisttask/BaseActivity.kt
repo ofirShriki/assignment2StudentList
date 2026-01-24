@@ -26,5 +26,14 @@ abstract class BaseActivity : AppCompatActivity() {
         }
 
         setSupportActionBar(binding.toolbar)
+
+        if (this !is StudentListMainActivity) {
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressedDispatcher.onBackPressed()
+        return true
     }
 }
