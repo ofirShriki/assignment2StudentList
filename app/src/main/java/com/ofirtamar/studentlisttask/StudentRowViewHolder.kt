@@ -1,7 +1,6 @@
 package com.ofirtamar.studentlisttask
 
 import android.content.Intent
-import android.util.Log
 import androidx.recyclerview.widget.RecyclerView
 import com.ofirtamar.studentlisttask.databinding.StudentListRowBinding
 import com.ofirtamar.studentlisttask.models.Student
@@ -40,7 +39,7 @@ class StudentRowViewHolder(
             isChecked = student.checkStatus
             tag = position
         }
-        Log.v("TAG", "Loading image from URI: ${student.avatarUrlString}")
+
         Picasso
             .get()
             .load(student.avatarUrlString)
