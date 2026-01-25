@@ -39,7 +39,6 @@ class StudentRowViewHolder(
             isChecked = student.checkStatus
             tag = position
         }
-
         student.avatarUrlString?.let {
             binding.studentAvatar.setImageURI(Uri.parse(it))
         }
